@@ -4,5 +4,5 @@ This is a template for R projects for data analysis. For repositories with other
 
 ## Project-oriented workflow
 
-Why we need project-oriented workflow. Here the answer (https://www.tidyverse.org/blog/2017/12/workflow-vs-script/). From these recomendations that only thing I think we can skip is using the package "here". 
+Why we need project-oriented workflow? Here the answer (https://www.tidyverse.org/blog/2017/12/workflow-vs-script/). From these recomendations that only thing I think we can skip is using the package "here". 
 

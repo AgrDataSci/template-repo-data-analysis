@@ -6,5 +6,5 @@ Suggestions/comments on this template or for new templates are welcome!
 
 ## Project-oriented workflow
 
-Why we need project-oriented workflow? Here the answer (https://www.tidyverse.org/blog/2017/12/workflow-vs-script/). From these recomendations that only thing I think we can skip is using the package "here". 
+Why we need project-oriented workflow? Here the answer (https://www.tidyverse.org/blog/2017/12/workflow-vs-script/). From these recomendations the only thing that I think we can skip is using the package "here". 
 

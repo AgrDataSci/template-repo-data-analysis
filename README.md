@@ -18,4 +18,6 @@ In 2016, the ‘FAIR Guiding Principles for scientific data management and stewa
 
 ## Metadata
 
+The metadata/ folder contains structured metadata files that support the FAIR principles for scientific data and software publication. These files are designed to ensure reproducibility, transparency, and proper attribution in open science workflows. The folder structure is interoperable with [Zenodo](https://zenodo.org) for data publication. Please edit as you like and use the R script in the script/ folder to generate a .json file that you be parsed by Zenodo once you link your repository for publication. 
+
 

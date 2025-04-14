@@ -34,9 +34,9 @@ template-repo-data-analysis/
 │   └── README.md
 ├── output/               # Model results, figures, tables
 ├── script/               # Scripts for validation, metadata generation, etc.
-├── .gitignore
-├── LICENSE
-├── CITATION.cff
+├── .gitignore            # Indicates which files or folders to exclude from version control
+├── LICENSE               # A valid license file stablishing the rights to use the data
+├── CITATION.cff          # Used by GitHub and Zenodo to generate citation metadata
 └── README.md             # Project overview
 ```
 ---

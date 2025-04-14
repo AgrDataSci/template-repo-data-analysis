@@ -16,6 +16,6 @@ Why we use project-oriented workflow? Here is the answer (https://www.tidyverse.
 
 In 2016, the ‘FAIR Guiding Principles for scientific data management and stewardship’ were published in Scientific Data. The authors intended to provide guidelines to improve the Findability, Accessibility, Interoperability, and Reuse of digital assets. The principles emphasise machine-actionability (i.e., the capacity of computational systems to find, access, interoperate, and reuse data with none or minimal human intervention) because humans increasingly rely on computational support to deal with data as a result of the increase in volume, complexity, and creation speed of data. Read more here https://www.go-fair.org/fair-principles/
 
-## Medata
+## Metadata
 
 

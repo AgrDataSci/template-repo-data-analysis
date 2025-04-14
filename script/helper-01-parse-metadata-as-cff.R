@@ -10,14 +10,12 @@ authors = read_excel(file, sheet = "authors")
 meta_list = setNames(as.list(metadata$value), metadata$key)
 
 # Start building the CFF content
-cff = c(
-  "cff-version: 1.2.0",
-  'message: "If you use this dataset or software, please cite it as below."',
-  paste0("title: \"", meta_list$title, "\""),
-  paste0("version: \"", meta_list$version, "\""),
-  paste0("date-released: ", meta_list$publication_date),
-  "authors:"
-)
+cff = c("cff-version: 1.2.0",
+        'message: "If you use this dataset or software, please cite it as below."',
+        paste0("title: \"", meta_list$title, "\""),
+        paste0("version: \"", meta_list$version, "\""),
+        paste0("date-released: ", meta_list$publication_date),
+        "authors:")
 
 # Process authors
 for (i in seq_len(nrow(authors))) {

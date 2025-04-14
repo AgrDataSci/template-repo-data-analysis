@@ -33,7 +33,6 @@ template-repo-data-analysis/
 │   ├── metadata.json
 │   └── README.md
 ├── output/               # Model results, figures, tables
-├── processing/           # Scripts for raw data cleaning/processing
 ├── script/               # Scripts for validation, metadata generation, etc.
 ├── .gitignore
 ├── LICENSE

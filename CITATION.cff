@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this dataset or software, please cite it as below."
+title: "Template for project-oriented and FAIR data analysis workflows"
+version: "v1.0"
+date-released: 2025-04-14
+authors:
+  - family-names: de Sousa
+    given-names: Kauê
+    orcid: https://orcid.org/0000-0002-7571-7845
+    affiliation: "Alliance Bioversity International – CIAT; Inland Norway University of Applied Sciences"
+  - family-names: Laporte
+    given-names: Marie-Angélique
+    orcid: https://orcid.org/0000-0002-8461-9745
+    affiliation: "Alliance Bioversity International – CIAT"
+repository-code: https://github.com/AgrDataSci/template-repo-data-analysis
+license: CC-BY-4.0
+keywords:
+  - data-driven research
+  - FAIR principles

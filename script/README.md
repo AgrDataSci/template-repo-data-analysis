@@ -9,5 +9,7 @@ Hint 1. Put your scripts in numeric order, then everybody knows where to start. 
 - 02-analysis-yield-estimation.R
 - 03-produce-maps.R
 
+Hint 2. Create helper scripts.
 
+These scripts are not necessarily linked to the data analysis workflow. But can be used to automate processes like generating parseable metadata.
 

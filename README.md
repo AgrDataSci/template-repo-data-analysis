@@ -3,23 +3,109 @@
 <!-- badges: end --> 
 
 ## Template for project-oriented and FAIR data analysis workflows
+> Kauê de Sousa, Marie-Angélique Laporte
 
-This is a generic template to allow scientists in using a well structured data workflow following the project-oriented approach and findable accessible interoperable and reusable (FAIR) principles for data and code publication in science.
+Here we introduce a reusable, project-oriented data analysis template designed to align with the FAIR principles (Findable, Accessible, Interoperable, and Reusable). The template offers a structured and scalable approach for managing scientific data and code, particularly suited for collaborative and open science environments. It integrates good practices from R-based workflows, GitHub–Zenodo integration, and metadata standards including DataCite and CFF.
 
-Suggestions/comments on this template or for new templates are welcome!
+---
 
-## Project-oriented workflow
+## Objectives
 
-Why we use project-oriented workflow? Here is the answer (https://www.tidyverse.org/blog/2017/12/workflow-vs-script/). From these recommendations the only thing that I think we can skip is using the package "here". 
+The template aims to:
 
-## FAIR principles
+- Improve consistency and reproducibility across research projects.
+- Ensure research outputs are FAIR and ready for long-term archiving.
+- Provide a ready-to-use metadata structure for data and code publication.
+- Support automated workflows and interoperability with platforms like Zenodo, GitHub, and institutional repositories.
 
-In 2016, the ‘FAIR Guiding Principles for scientific data management and stewardship’ were published in Scientific Data. The authors intended to provide guidelines to improve the Findability, Accessibility, Interoperability, and Reuse of digital assets. The principles emphasise machine-actionability (i.e., the capacity of computational systems to find, access, interoperate, and reuse data with none or minimal human intervention) because humans increasingly rely on computational support to deal with data as a result of the increase in volume, complexity, and creation speed of data. Read more here https://www.go-fair.org/fair-principles/
+---
 
-## Metadata
+## Repository structure
 
-The metadata/ folder contains structured metadata files that support the FAIR principles for scientific data and software publication. These files are designed to ensure reproducibility, transparency, and proper attribution in open science workflows. The folder structure is interoperable with [Zenodo](https://zenodo.org) for data publication. Please edit as you like and use the R script in the script/ folder to generate a .json file that you be parsed by Zenodo once you link your repository for publication. 
+The project follows a project-oriented layout inspired by best practices in the R community.
 
-The `CITATION.cff` file provides citation information in a human- and machine-readable format for GitHub and Zenodo integration. To update this file 1) Update the file `metadata/metadata.xlsx`, 2) Run the script `script/helper-01-parse-metadata-as-cff.R`. 
+```text
+template-repo-data-analysis/
+├── data/                 # Raw and cleaned datasets
+├── docs/                 # Reports or additional documentation
+├── metadata/             # Metadata files and templates
+│   ├── metadata.xlsx
+│   ├── metadata.json
+│   └── README.md
+├── output/               # Model results, figures, tables
+├── processing/           # Scripts for raw data cleaning/processing
+├── script/               # Scripts for validation, metadata generation, etc.
+├── .gitignore
+├── LICENSE
+├── CITATION.cff
+└── README.md             # Project overview
+```
+---
 
+## Best practices incorporated
+
+- **Project-oriented** structure.
+- **FAIR-compliant metadata** with Zenodo and DataCite standards.
+- **Automation** via R scripts for JSON conversion and validation.
+- **Citation support** with `CITATION.cff` file.
+- **Clear separation** of raw data, outputs, scripts, and documentation.
+- **GitHub–Zenodo integration** for DOI minting.
+
+---
+
+## Metadata management
+
+The `metadata/` folder contains:
+
+- `metadata.xlsx`: Main spreadsheet with sheets for general metadata, authors, funders, dates, and communities.
+- `metadata.json`: DataCite-compliant metadata for institutional or repository submission.
+- `CITATION.cff`: Used by GitHub and Zenodo to generate citation metadata (it must be placed on the main root).
+- `README.md`: Guide to using the metadata tools.
+
+---
+
+## How to use this template
+
+1. **Clone or fork the repository** and open it in RStudio.
+2. **Complete `metadata.xlsx`** using the provided structure.
+3. **Add your data**
+4. **Run your analysis**
+5. **Run the R scripts** from the `script/` folder to:
+   - Validate metadata 
+   - Convert to JSON
+6. **Publish to Zenodo**:
+   - Enable the GitHub repo in your [Zenodo GitHub settings](https://zenodo.org/account/settings/github/).
+   - Create a GitHub release. Zenodo will use the `CITATION.cff` to generate a DOI.
+
+---
+
+## Reusability and extensions
+
+This template is suitable for:
+- Research projects requiring data publication.
+- Collaborative projects across CGIAR and university partners.
+- Students and researchers new to reproducible data workflows.
+
+The structure is extensible and can support:
+- Additional metadata vocabularies (e.g., Dublin Core, CKAN)
+- Workflow automation using GitHub Actions or R scripts
+- Integration with institutional data catalogs
+
+---
+
+## Contribute
+
+This template is open for improvement! You can:
+- Suggest edits via GitHub Issues
+- Fork the repository for your own project
+- Contribute back improvements via pull request
+
+---
+
+## References
+
+- [FAIR Principles](https://www.go-fair.org/fair-principles/)
+- [DataCite Metadata Schema](https://schema.datacite.org/)
+- [GitHub–Zenodo Integration](https://docs.github.com/en/repositories/archiving-a-github-repository/about-archiving-repositories)
+- [Project-Oriented Workflows in R](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/)
 

@@ -23,6 +23,3 @@
 # R Environment Variables
 .Renviron
 
-# ClimMob API key
-token/api-key.txt
-*.png

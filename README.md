@@ -106,6 +106,6 @@ This template is open for improvement! You can:
 
 - [FAIR Principles](https://www.go-fair.org/fair-principles/)
 - [DataCite Metadata Schema](https://schema.datacite.org/)
-- [GitHub–Zenodo Integration](https://docs.github.com/en/repositories/archiving-a-github-repository/about-archiving-repositories)
+- [GitHub–Zenodo Integration](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content)
 - [Project-Oriented Workflows in R](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/)
 

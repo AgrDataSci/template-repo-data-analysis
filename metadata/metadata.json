@@ -1,148 +1,96 @@
 {
-  "title": "Template for project-oriented and FAIR data analysis workflows",
-  "version": "v1.0",
-  "publication_date": "2025-04-14",
+  "titles": [
+    {
+      "title": "Template for project-oriented and FAIR data analysis workflows"
+    }
+  ],
   "publisher": "Zenodo",
-  "description": "This is a generic template to allow scientists in using a well structured data workflow following the project-oriented approach and findable accessible interoperable and reusable (FAIR) principles for data and code publication in science.",
-  "language": {
-    "id": "eng",
-    "title": {
-      "en": "English"
-    }
+  "publicationYear": "2025",
+  "resourceType": {
+    "resourceTypeGeneral": "Dataset",
+    "resourceType": "Dataset"
   },
-  "resource_type": {
-    "id": "dataset",
-    "title": {
-      "en": "Dataset"
+  "descriptions": [
+    {
+      "description": "This is a generic template to allow scientists in using a well structured data workflow following the project-oriented approach and findable accessible interoperable and reusable (FAIR) principles for data and code publication in science.",
+      "descriptionType": "Abstract"
     }
-  },
-  "github_repo": "https://github.com/AgrDataSci/template-repo-data-analysis",
-  "subjects": ["data-driven research", "FAIR principles"],
+  ],
+  "version": "v1.0",
+  "language": "eng",
+  "rightsList": [
+    {
+      "rights": "Creative Commons Attribution 4.0 International",
+      "rightsUri": "https://creativecommons.org/licenses/by/4.0/",
+      "rightsIdentifier": "cc-by-4.0",
+      "rightsIdentifierScheme": "SPDX"
+    }
+  ],
+  "subjects": [
+    {
+      "subject": "data-driven research"
+    },
+    {
+      "subject": "FAIR principles"
+    }
+  ],
   "creators": [
     {
-      "person_or_org": {
-        "given_name": "Kauê",
-        "family_name": "de Sousa",
-        "name": "Kauê de Sousa",
-        "type": "personal",
-        "identifiers": [
-          {
-            "identifier": "0000-0002-7571-7845",
-            "scheme": "orcid"
-          }
-        ]
-      },
-      "role": {
-        "id": "datamanager",
-        "title": {
-          "en": "Datamanager"
-        }
-      },
-      "affiliations": [
+      "name": "de Sousa, Kauê",
+      "nameType": "Personal",
+      "givenName": "Kauê",
+      "familyName": "de Sousa",
+      "affiliation": [
+        "Alliance Bioversity International – CIAT",
+        "Inland Norway University of Applied Sciences"
+      ],
+      "nameIdentifiers": [
         {
-          "name": "Alliance Bioversity International – CIAT"
-        },
-        {
-          "name": "Inland Norway University of Applied Sciences"
+          "nameIdentifier": "https://orcid.org/0000-0002-7571-7845",
+          "nameIdentifierScheme": "ORCID",
+          "schemeUri": "https://orcid.org"
         }
       ]
     },
     {
-      "person_or_org": {
-        "given_name": "Marie-Angélique",
-        "family_name": "Laporte",
-        "name": "Marie-Angélique Laporte",
-        "type": "personal",
-        "identifiers": [
-          {
-            "identifier": "0000-0002-8461-9745",
-            "scheme": "orcid"
-          }
-        ]
-      },
-      "role": {
-        "id": "datamanager",
-        "title": {
-          "en": "Datamanager"
-        }
-      },
-      "affiliations": [
+      "name": "Laporte, Marie-Angélique",
+      "nameType": "Personal",
+      "givenName": "Marie-Angélique",
+      "familyName": "Laporte",
+      "affiliation": [
+        "Alliance Bioversity International – CIAT"
+      ],
+      "nameIdentifiers": [
         {
-          "name": "Alliance Bioversity International – CIAT"
+          "nameIdentifier": "https://orcid.org/0000-0002-8461-9745",
+          "nameIdentifierScheme": "ORCID",
+          "schemeUri": "https://orcid.org"
         }
       ]
-    }
-  ],
-  "funding": [
-    {
-      "funder": {
-        "name": "Norwegian Agency for Development Cooperation",
-        "identifiers": [
-          {
-            "identifier": "https://ror.org/04zbn7k04",
-            "scheme": "ror"
-          }
-        ]
-      },
-      "award": {
-        "title": "Biodiversity for Opportunities, Livelihoods and Development (BOLD)",
-        "number": "CONT-1522"
-      }
-    },
-    {
-      "funder": {
-        "name": "Gates Foundation",
-        "identifiers": [
-          {
-            "identifier": "https://ror.org/0456r8d26",
-            "scheme": "ror"
-          }
-        ]
-      },
-      "award": {
-        "title": "1000FARMS",
-        "number": "INV-031561"
-      }
-    }
-  ],
-  "communities": [
-    {
-      "id": "cropontologycop"
     }
   ],
   "dates": [
     {
       "date": "2025-04-14",
-      "type": {
-        "id": "accepted",
-        "title": {
-          "en": "Accepted"
-        }
-      }
+      "dateType": "Accepted"
     },
     {
       "date": "2025-04-14",
-      "type": {
-        "id": "submitted",
-        "title": {
-          "en": "Submitted"
-        }
-      }
+      "dateType": "Submitted"
     }
   ],
-  "rights": [
+  "fundingReferences": [
     {
-      "id": "cc-by-4.0",
-      "title": {
-        "en": "Creative Commons Attribution 4.0 International"
-      },
-      "description": {
-        "en": "Allows redistribution and reuse with credit to the original author."
-      },
-      "props": {
-        "scheme": "spdx",
-        "url": "https://creativecommons.org/licenses/by/4.0/legalcode"
-      }
+      "funderName": "Norwegian Agency for Development Cooperation",
+      "funderIdentifier": "https://ror.org/04zbn7k04",
+      "awardTitle": "Biodiversity for Opportunities, Livelihoods and Development (BOLD)",
+      "awardNumber": "CONT-1522"
+    },
+    {
+      "funderName": "Gates Foundation",
+      "funderIdentifier": "https://ror.org/0456r8d26",
+      "awardTitle": "1000FARMS",
+      "awardNumber": "INV-031561"
     }
   ]
 }

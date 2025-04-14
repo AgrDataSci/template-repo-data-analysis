@@ -26,18 +26,19 @@ The project follows a project-oriented layout inspired by best practices in the 
 
 ```text
 template-repo-data-analysis/
-├── data/                 # Raw and cleaned datasets
-├── docs/                 # Reports or additional documentation
-├── metadata/             # Metadata files and templates
+├── data/                              # Raw and cleaned datasets
+├── docs/                              # Reports or additional documentation
+├── metadata/                          # Metadata files and templates
 │   ├── metadata.xlsx
 │   ├── metadata.json
 │   └── README.md
-├── output/               # Model results, figures, tables
-├── script/               # Scripts for validation, metadata generation, etc.
-├── .gitignore            # Indicates which files or folders to exclude from version control
-├── LICENSE               # A valid license file stablishing the rights to use the data
-├── CITATION.cff          # Used by GitHub and Zenodo to generate citation metadata
-└── README.md             # Project overview
+├── output/                            # Model results, figures, tables
+├── script/                            # Scripts for validation, metadata generation, etc.
+├── .gitignore                         # Indicates which files or folders to exclude from version control
+├── LICENSE                            # A valid license file stablishing the rights to use the data
+├── CITATION.cff                       # Used by GitHub and Zenodo to generate citation metadata
+├── template-repo-data-analysis.Rproj  # RStudio file to set up the environment (must be renamed)
+└── README.md                          # Project overview
 ```
 ---
 

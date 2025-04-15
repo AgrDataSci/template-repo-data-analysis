@@ -2,7 +2,7 @@
 library("readxl")
 
 # Read metadata and authors from Excel
-file = "metadata/metadata.xlsx"
+file = "metadata/project-metadata.xlsx"
 metadata = read_excel(file, sheet = "metadata")
 authors = read_excel(file, sheet = "authors")
 

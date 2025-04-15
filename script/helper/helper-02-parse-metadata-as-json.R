@@ -3,7 +3,7 @@ library("readxl")
 library("jsonlite")
 
 # Path to your Excel file
-file = "metadata/metadata.xlsx"
+file = "metadata/project-metadata.xlsx"
 
 # --- 1. Read sheets ---
 metadata = read_excel(file, sheet = "metadata")

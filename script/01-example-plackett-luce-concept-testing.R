@@ -13,9 +13,9 @@ dir.create("script/session-info/", showWarnings = FALSE, recursive = TRUE)
 
 sessioninfo::session_info()
 
-# export session info
+# export session info to allow backward compatibility on package versions
 capture.output(print(sessioninfo::session_info()), 
-               file = "script/session-info/session-info-concept-testing.txt")
+               file = "script/session-info/01-example-plackett-luce-concept-testing.txt")
 
 # read the data
 dat = read.csv('data/example-data-mip-uganda.csv')

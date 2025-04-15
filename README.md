@@ -26,7 +26,7 @@ The project follows a project-oriented layout inspired by best practices in the 
 
 ```text
 template-repo-data-analysis/
-├── data/                              # Raw and cleaned datasets
+├── data/                              # Anonimized raw and cleaned datasets
 ├── docs/                              # Reports or additional documentation
 ├── metadata/                          # Metadata files and templates
 │   ├── metadata.xlsx
@@ -75,7 +75,7 @@ The `metadata/` folder contains:
    - Convert to JSON
 6. **Publish to Zenodo**:
    - Enable the GitHub repo in your [Zenodo GitHub settings](https://zenodo.org/account/settings/github/).
-   - Create a GitHub release. Zenodo will use the `CITATION.cff` to generate a DOI.
+   - Create a GitHub release. Zenodo will use the `CITATION.cff` to generate the DOI metadata.
 
 ---
 
@@ -87,7 +87,7 @@ This template is suitable for:
 - Students and researchers new to reproducible data workflows.
 
 The structure is extensible and can support:
-- Additional metadata vocabularies (e.g., Dublin Core, CKAN)
+- Additional metadata schemas and controled vocabularies (e.g., Dublin Core, DCAT)
 - Workflow automation using GitHub Actions or R scripts
 - Integration with institutional data catalogs
 

@@ -12,7 +12,7 @@
   },
   "descriptions": [
     {
-      "description": "This is a generic template to allow scientists in using a well structured data workflow following the project-oriented approach and findable accessible interoperable and reusable (FAIR) principles for data and code publication in science.",
+      "description": "This is a generic template to allow scientists in using a well structured data workflow following the project-oriented approach and findable accessible interoperable and reusable (FAIR) principles for data and code publication in science. The project contains a example of data from the CIMMYT market intelligence research (Donovan et al 2025, https://doi.org/10.1017/S001447972500002X) with data description and an example of R script for analysis and documentation. Feel free to delete the example files once the project is adapted for your needs.",
       "descriptionType": "Abstract"
     }
   ],
@@ -42,7 +42,7 @@
       "familyName": "de Sousa",
       "affiliation": [
         "Alliance Bioversity International – CIAT",
-        "Inland Norway University of Applied Sciences"
+        "University of Inland Norway"
       ],
       "nameIdentifiers": [
         {

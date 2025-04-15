@@ -120,7 +120,7 @@ if (!is.null(funders)) {
 }
 
 # Write to JSON
-write(toJSON(datacite, pretty = TRUE, auto_unbox = TRUE), "metadata/metadata.json")
+write(toJSON(datacite, pretty = TRUE, auto_unbox = TRUE), "metadata/project-metadata.json")
 
 
 # # --- 2. Process metadata into named list ---

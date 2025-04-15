@@ -31,7 +31,7 @@ This folder provides the core metadata structure for your project.
 Run the accompanying R script to parse Excel metadata into .cff:
 
 ```r
-source("script/helper-01-parse-metadata-as-cff.")
+source("script/helper/helper-01-parse-metadata-as-cff.")
 ```
 
 Ensure your `CITATION.cff` file at the root of the repo reflects your authors and repository URL. This enables GitHub-Zenodo citation integration.
@@ -40,7 +40,7 @@ Ensure your `CITATION.cff` file at the root of the repo reflects your authors an
 Run the accompanying R script to parse Excel metadata into JSON:
 
 ```r
-source("script/helper-02-parse-metadata-as-json.R")
+source("script/helper/helper-02-parse-metadata-as-json.R")
 ```
 
 This will generate a [DataCite](https://datacite-metadata-schema.readthedocs.io/en/4.6/) compliant metadata.

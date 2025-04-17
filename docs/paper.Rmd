@@ -96,6 +96,6 @@ Adopting structured, FAIR-aligned workflows can significantly enhance reproducib
 
 # Acknowledgments
 
-This work has been supported by the 1000FARMS project (INV-031561) funded by the Gates Foundation and from the Building Opportunities for Lesser-known Diversity in Edible Resources (BOLDER) project (Crop Trust Ref: CONT-1522) funded by the Norwegian Agency for Development Cooperation (Norad) through The Global Crop Diversity Trust.
+This work has been supported by the projects 1000FARMS (INV-031561) funded by the Gates Foundation, and BOLD Work Package 7 (Crop Trust Ref: CONT-1522) funded by the Norwegian Agency for Development Cooperation (Norad) through The Global Crop Diversity Trust.
 
 # References

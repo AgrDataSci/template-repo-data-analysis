@@ -1,7 +1,7 @@
 {
   "titles": [
     {
-      "title": "Template for project-oriented and FAIR data analysis workflows"
+      "title": "A FAIR and project-oriented template for open science data workflows"
     }
   ],
   "publisher": "Zenodo",
@@ -32,6 +32,12 @@
     },
     {
       "subject": "FAIR principles"
+    },
+    {
+      "subject": "data management"
+    },
+    {
+      "subject": "open science"
     }
   ],
   "creators": [

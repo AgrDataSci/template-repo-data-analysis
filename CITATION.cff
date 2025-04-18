@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this dataset or software, please cite it as below."
-title: "Template for project-oriented and FAIR data analysis workflows"
+title: "A FAIR and project-oriented template for open science data workflows"
 version: "v1.0"
 date-released: 2025-04-14
 authors:
@@ -17,3 +17,5 @@ license: CC-BY-4.0
 keywords:
   - data-driven research
   - FAIR principles
+  - data management
+  - open science

@@ -32,7 +32,7 @@ keywords:
 journal: "CGSpace"
 date: "`r Sys.Date()`"
 linenumbers: false
-numbersections: true
+numbersections: false
 bibliography: paper.bib
 classoption: 3p, authoryear 
 output: 
@@ -62,7 +62,7 @@ template-repo-data-analysis/
 |    |-- project-metadata.xlsx                  # Project metadata
 |    |-- project-metadata.json                  # Project metadata for DataCite
 |    |-- example-metadata-data-mip-uganda.csv   # Description of the dataset (example)
-|    |--  README.md    
+|    |-- README.md    
 |-- output/                                     # Model results, figures, tables
 |-- script/                                     # Data analysis scripts
 |-- .gitignore                                  # List of files to exclude from Git

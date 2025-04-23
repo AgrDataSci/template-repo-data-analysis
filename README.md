@@ -34,7 +34,7 @@ template-repo-data-analysis/
 │   ├── project-metadata.json                   # JSON file with project metadata for DataCite
 │   ├── example-metadata-data-mip-uganda.csv    # Description of the dataset used as example
 │   └── README.md    
-├── output/                                     # Model results, figures, tables
+├── output/                                     # Model results, figures, tables 
 ├── script/                                     # Scripts for validation, metadata generation, etc.
 ├── .gitignore                                  # Indicates which files or folders to exclude from version control
 ├── LICENSE                                     # A valid license file stablishing the rights to use the data

@@ -42,7 +42,7 @@ output:
 
 # Suggested citation
 
-> de Sousa, K.; Laporte, M.-A. (2025) A FAIR and project-oriented template for open science data workflows. Zenodo <https://doi.org/10.5281/zenodo.15224389>.
+> de Sousa, K.; Laporte, M.-A. (2025) A FAIR and project-oriented template for open science data workflows. <https://hdl.handle.net/10568/174310>.
 
 \pagebreak
 

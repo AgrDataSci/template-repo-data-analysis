@@ -29,6 +29,10 @@ for (i in seq_len(nrow(authors))) {
     paste0("    orcid: https://orcid.org/", row$orcid),
     paste0("    affiliation: \"", affil_string, "\"")
   )
+  
+  if(is.na(row$orcid)) author_block = author_block[-3]
+  
+  
   cff = c(cff, author_block)
 }
 

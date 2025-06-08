@@ -16,7 +16,7 @@
       "descriptionType": "Abstract"
     }
   ],
-  "version": "v1.1",
+  "version": "v1.2",
   "language": "eng",
   "rightsList": [
     {
@@ -47,7 +47,7 @@
       "givenName": "Kauê",
       "familyName": "de Sousa",
       "affiliation": [
-        "Alliance Bioversity International – CIAT",
+        "Bioversity International",
         "University of Inland Norway"
       ],
       "nameIdentifiers": [
@@ -64,7 +64,7 @@
       "givenName": "Marie-Angélique",
       "familyName": "Laporte",
       "affiliation": [
-        "Alliance Bioversity International – CIAT"
+        "Bioversity International"
       ],
       "nameIdentifiers": [
         {

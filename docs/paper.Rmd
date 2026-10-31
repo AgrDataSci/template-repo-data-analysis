@@ -74,7 +74,8 @@ template-repo-data-analysis/
 |-- script/                       # Analysis scripts, run in numeric order
 |    |-- helper/                  # Environment setup, metadata generation
 |-- tests/                        # One test per analysis script
-|-- .github/workflows/check.yml   # Runs all tests on GitHub
+|-- .github/workflows/            # Runs tests, renders the paper
+|-- renv/, renv.lock, .Rprofile  # Pinned R package versions
 |-- AGENTS.md                     # Short instructions for AI agents
 |-- SKILL.md                      # Skill for AI assistants
 |-- llms.txt                      # Entry point for AI tools on the web
@@ -90,7 +91,7 @@ template-repo-data-analysis/
 -   **Automated metadata workflows.** R scripts [@CRAN] validate the metadata and convert them to `CITATION.cff` and DataCite JSON.
 -   **Decision records.** Each analysis script has a record stating the scientific question, the method and why it was chosen, its assumptions, alternatives and diagnostics, and what the results do and do not support.
 -   **Provenance.** A machine-readable file links each output to the script that produced it, the input data, the protocol behind the data, and the published evidence.
--   **Reproducibility.** Package versions are pinned with renv (<https://rstudio.github.io/renv/>), each script records the software versions of its last run, and each script has a test with documented expected results.
+-   **Reproducibility.** The template uses renv (<https://rstudio.github.io/renv/>) to record the exact version of every R package in a lock file, and ships with the lock file of its example, so anyone can rebuild the same environment with one command. Each script also records the software versions of its last run, and each script has a test with documented expected results. The README explains each of these tools step by step for users new to them.
 -   **Continuous checks.** GitHub Actions runs every test on each push, so the repository always shows whether its computations still reproduce.
 -   **AI readiness.** `SKILL.md`, `AGENTS.md` and `llms.txt` tell AI assistants how the project is organized, which conventions to follow, and which rules to respect.
 -   **Citation integration.** A `CITATION.cff` file lets GitHub and Zenodo generate citations and DOIs.
@@ -112,7 +113,7 @@ The test checks that the 150 rankings are complete, that all eight concepts rece
 
 Researchers adopt the template in these steps.
 
-1.  Copy the repository from GitHub (<https://github.com/AgrDataSci/template-repo-data-analysis>) and pin package versions with the setup helper script.
+1.  Copy the repository from GitHub (<https://github.com/AgrDataSci/template-repo-data-analysis>) and install the pinned package versions with the setup helper script.
 2.  Add the data and describe each variable in a data dictionary.
 3.  Write the analysis in numbered scripts, each with a decision record and a test.
 4.  Register inputs, outputs, protocols and evidence in the provenance file.
@@ -121,7 +122,7 @@ Researchers adopt the template in these steps.
 
 # What is new in version 1.3
 
-Version 1.3 adds decision records, the provenance file, tests with continuous checks on GitHub, pinned package versions, and instructions for AI assistants. The example script now checks the rankings before fitting the model and saves its outputs. The documentation was revised throughout, and the template now links to the other repositories of ai-ready-documentation.
+Version 1.3 adds decision records, the provenance file, tests with continuous checks on GitHub, pinned package versions, and instructions for AI assistants. The README now explains key terms and each tool in plain language for students and researchers new to data management. The example script now checks the rankings before fitting the model and saves its outputs. The documentation was revised throughout, and the template now links to the other repositories of ai-ready-documentation.
 
 # Conclusion
 

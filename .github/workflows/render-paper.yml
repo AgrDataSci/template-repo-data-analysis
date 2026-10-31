@@ -16,6 +16,10 @@ permissions:
 jobs:
   render:
     runs-on: ubuntu-latest
+    # rendering needs only rmarkdown and LaTeX, so the project's renv
+    # library is not loaded here
+    env:
+      RENV_CONFIG_AUTOLOADER_ENABLED: false
     steps:
       - uses: actions/checkout@v5
 

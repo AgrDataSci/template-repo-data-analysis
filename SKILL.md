@@ -13,7 +13,7 @@ A project scaffold from the AgrDataSci team for analyses that people and AI assi
 2. **Organize work.** Data in `data/`, numbered scripts in `script/`, results in `output/`, documents in `docs/`, metadata in `metadata/`.
 3. **Document decisions.** For each script, write a record in `decisions/` from `decisions/_template.md`. It states the question, the method and why, assumptions, alternatives, diagnostics, and what the results do and do not support.
 4. **Trace results.** Register inputs, code, outputs, protocols and evidence in `metadata/provenance.json`, so each output links back to its sources.
-5. **Make it reproducible.** Pin package versions with `script/helper/helper-00-setup-environment.R` (renv). Write a test per script in `tests/`. The GitHub check in `.github/workflows/check.yml` runs every test on each push.
+5. **Make it reproducible.** Package versions are pinned in `renv.lock`. Restore them with `script/helper/helper-00-setup-environment.R`, and record the software of each run in `script/session-info/`. Write a test per script in `tests/`. The GitHub check in `.github/workflows/check.yml` runs every test on each push.
 6. **Publish and cite.** Fill `metadata/project-metadata.xlsx`, generate `CITATION.cff` and DataCite JSON with the helper scripts, and archive a GitHub release on Zenodo for a DOI.
 
 The worked example in this repository (`01-example-plackett-luce-concept-testing`) shows every piece together, from data dictionary to decision record, test and provenance entry.
@@ -35,13 +35,15 @@ The worked example in this repository (`01-example-plackett-luce-concept-testing
 - Number scripts in the order they run (`01-`, `02-`). Give the test and the decision record the same number.
 - Use lowercase file names with `-` or `_`, never spaces.
 - Start each script with a header naming its question, inputs, outputs, decision record and test.
+- After the `library()` calls, write the session information to `script/session-info/<script-name>.txt` (see `script/README.md`).
+- After installing or updating a package, run `renv::snapshot()` and commit `renv.lock`. To rebuild the environment, run `renv::restore()`.
 - Comments explain scientific intent and choices, not only mechanics.
 
 ## Index
 
 | File | Open it when |
 |---|---|
-| [README.md](README.md) | The user wants an overview or the step-by-step setup |
+| [README.md](README.md) | The user wants an overview, the step-by-step setup, plain explanations of key terms, or help with renv and session information |
 | [AGENTS.md](AGENTS.md) | You need the short version of these rules |
 | [decisions/README.md](decisions/README.md) | Writing or reading a decision record, or assigning a status label |
 | [decisions/_template.md](decisions/_template.md) | Starting a new decision record |

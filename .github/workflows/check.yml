@@ -1,6 +1,6 @@
 # Runs every analysis script and its tests on each push and pull request,
 # so the repository always shows whether the computation still reproduces.
-# Uses renv.lock when it exists, otherwise installs the packages listed below.
+# Tests run with the package versions pinned in renv.lock.
 name: Check analysis
 
 on:
@@ -19,15 +19,12 @@ jobs:
         with:
           use-public-rspm: true
 
-      - name: Restore pinned packages
-        if: hashFiles('renv.lock') != ''
-        uses: r-lib/actions/setup-renv@v2
-
-      # setup-r-dependencies also installs the system libraries each package
-      # needs (e.g. GLPK for igraph, which PlackettLuce depends on)
-      - name: Install packages
-        if: hashFiles('renv.lock') == ''
+      # installs the system libraries the R packages need (e.g. GLPK for
+      # igraph, which PlackettLuce depends on); renv is switched off here
+      - name: Install system libraries
         uses: r-lib/actions/setup-r-dependencies@v2
+        env:
+          RENV_CONFIG_AUTOLOADER_ENABLED: false
         with:
           packages: |
             any::gosset
@@ -37,6 +34,11 @@ jobs:
             any::testthat
             any::jsonlite
             any::readxl
+
+      # installs the exact package versions listed in renv.lock
+      - name: Restore pinned packages
+        if: hashFiles('renv.lock') != ''
+        uses: r-lib/actions/setup-renv@v2
 
       - name: Run tests
         run: |

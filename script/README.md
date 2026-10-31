@@ -18,10 +18,20 @@ Hint 4. Use `=` for assignment.
 
 Helper scripts are not part of the analysis. They set up the environment and generate metadata.
 
-- `helper-00-setup-environment.R` pins package versions with renv.
+- `helper-00-setup-environment.R` installs the package versions listed in `renv.lock`, or creates the lock file if there is none. Run it once when you start. The main README explains renv step by step.
 - `helper-01-parse-metadata-as-cff.R` writes `CITATION.cff` from `metadata/project-metadata.xlsx`.
 - `helper-02-parse-metadata-as-json.R` validates the metadata and writes `metadata/project-metadata.json` for DataCite.
 
 ## session-info
 
-Analysis scripts write the R and package versions of their last run to `script/session-info/`, so results can be traced to the software that produced them.
+Every analysis script writes the R and package versions of its last run to `script/session-info/`, so results can be traced to the software that produced them. Add these lines near the top of each script, after the `library()` calls, and change the file name to match the script.
+
+```r
+# record the R and package versions of this run
+dir.create("script/session-info", showWarnings = FALSE, recursive = TRUE)
+
+capture.output(print(sessioninfo::session_info()),
+               file = "script/session-info/01-name-of-this-script.txt")
+```
+
+Commit the session-info files together with your results. `renv.lock` says which versions should be installed, while these files record which versions were actually used.

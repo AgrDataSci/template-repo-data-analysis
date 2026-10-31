@@ -45,7 +45,7 @@ output:
 
 > de Sousa, K.; Laporte, M.-A. (2026) A FAIR and project-oriented template for open science data workflows. Version 1.3. Zenodo. <https://doi.org/10.5281/zenodo.15224388>.
 
-All versions of the template and this paper are archived on Zenodo at <https://doi.org/10.5281/zenodo.15224388>. This permanent link always resolves to the latest version. Version 1.2 of this paper is also available at <https://hdl.handle.net/10568/174310>.
+This paper is also archived on CGSpace at <https://hdl.handle.net/10568/174310>. The most recent version of the template and this paper is always available at <https://doi.org/10.5281/zenodo.15224388>.
 
 \pagebreak
 

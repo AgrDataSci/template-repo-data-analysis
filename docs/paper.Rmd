@@ -43,9 +43,9 @@ output:
 
 # Suggested citation
 
-> de Sousa, K.; Laporte, M.-A. (2026) A FAIR and project-oriented template for open science data workflows. Version 1.3. Zenodo. <https://doi.org/10.5281/zenodo.15224389>.
+> de Sousa, K.; Laporte, M.-A. (2026) A FAIR and project-oriented template for open science data workflows. Version 1.3. Zenodo. <https://doi.org/10.5281/zenodo.15224388>.
 
-Version 1.2 of this paper is available at <https://hdl.handle.net/10568/174310>.
+All versions of the template and this paper are archived on Zenodo at <https://doi.org/10.5281/zenodo.15224388>. This permanent link always resolves to the latest version. Version 1.2 of this paper is also available at <https://hdl.handle.net/10568/174310>.
 
 \pagebreak
 
@@ -126,6 +126,10 @@ Version 1.3 adds decision records, the provenance file, tests with continuous ch
 # Conclusion
 
 Structured, FAIR-aligned workflows enhance reproducibility, collaboration, and transparency in research. By recording why each analysis was done and where every result comes from, this template also lets AI assistants reuse the work without overstating it. It provides a practical starting point that promotes these practices from the outset of a research project.
+
+# Code and data availability
+
+The template, the example data and this paper are openly available on GitHub at <https://github.com/AgrDataSci/template-repo-data-analysis> and archived on Zenodo at <https://doi.org/10.5281/zenodo.15224388>, under a CC BY 4.0 license.
 
 # Acknowledgments
 

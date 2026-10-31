@@ -60,6 +60,6 @@ The worked example in this repository (`01-example-plackett-luce-concept-testing
 
 Cite the template with [CITATION.cff](CITATION.cff).
 
-> de Sousa K, Laporte M-A (2026). A FAIR and project-oriented template for open science data workflows. Version v1.3. https://doi.org/10.5281/zenodo.15224389
+> de Sousa K, Laporte M-A (2026). A FAIR and project-oriented template for open science data workflows. Version v1.3. https://doi.org/10.5281/zenodo.15224388
 
 Projects built from the template carry their own citation, generated from their own metadata.

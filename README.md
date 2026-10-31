@@ -1,6 +1,6 @@
 <!-- badges: start -->
 [![License](https://img.shields.io/badge/License-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/deed.en) 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15224389.svg)](https://doi.org/10.5281/zenodo.15224389)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15224388.svg)](https://doi.org/10.5281/zenodo.15224388)
 [![Check analysis](https://github.com/AgrDataSci/template-repo-data-analysis/actions/workflows/check.yml/badge.svg)](https://github.com/AgrDataSci/template-repo-data-analysis/actions/workflows/check.yml)
 <!-- badges: end --> 
 
@@ -119,7 +119,7 @@ This template is open for improvement. You can
 
 Cite the template with [CITATION.cff](CITATION.cff).
 
-> de Sousa K, Laporte M-A (2026). A FAIR and project-oriented template for open science data workflows. Version v1.3. https://doi.org/10.5281/zenodo.15224389
+> de Sousa K, Laporte M-A (2026). A FAIR and project-oriented template for open science data workflows. Version v1.3. https://doi.org/10.5281/zenodo.15224388
 
 ---
 

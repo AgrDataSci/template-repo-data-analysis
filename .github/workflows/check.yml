@@ -1,0 +1,38 @@
+# Runs every analysis script and its tests on each push and pull request,
+# so the repository always shows whether the computation still reproduces.
+# Uses renv.lock when it exists, otherwise installs the packages listed below.
+name: Check analysis
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: r-lib/actions/setup-r@v2
+        with:
+          use-public-rspm: true
+
+      - name: Restore pinned packages
+        if: hashFiles('renv.lock') != ''
+        uses: r-lib/actions/setup-renv@v2
+
+      - name: Install packages
+        if: hashFiles('renv.lock') == ''
+        run: |
+          install.packages(c("gosset", "PlackettLuce", "ggplot2",
+                             "sessioninfo", "testthat", "jsonlite", "readxl"))
+        shell: Rscript {0}
+
+      - name: Run tests
+        run: |
+          for f in tests/test-*.R; do
+            echo "Running $f"
+            Rscript "$f"
+          done

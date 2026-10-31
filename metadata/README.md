@@ -1,58 +1,59 @@
-## Metadata
+## metadata
 
-The `metadata/` folder contains structured metadata files that support the **FAIR principles** (Findable, Accessible, Interoperable, and Reusable) for scientific data and software publication. These files are designed to ensure reproducibility, transparency, and proper attribution in open science workflows.
+The `metadata/` folder holds structured metadata that make the project Findable, Accessible, Interoperable and Reusable (FAIR). They support reproducibility, transparency and proper attribution, and they let people and AI assistants trace results to their sources.
 
-This folder typically includes:
-- `metadata.json`: A structured JSON file compliant with Zenodo’s API schema, enabling automated and standardized metadata submission.
-- `metadata.xlsx`: A user-friendly Excel template that allows contributors to enter metadata in tabular form, which can be parsed into structured formats using accompanying R scripts.
-- `README.md`: Explains the purpose and usage of each metadata file, supporting the onboarding of collaborators and data curators.
+The folder includes
+- `project-metadata.xlsx`, a spreadsheet where contributors enter project metadata by hand,
+- `project-metadata.json`, DataCite metadata generated from the spreadsheet,
+- `provenance.json`, links from each output to its code, input data, protocol and evidence,
+- data dictionaries such as `example-metadata-data-mip-uganda.csv`, one row per variable,
+- this `README.md`.
 
-The structure is designed to:
-- Support **versioned data releases** (e.g., through GitHub-Zenodo integrations)
-- Enable metadata reuse across different platforms (e.g., DataCite, Dryad, institutional repositories)
-- Encourage consistency across projects while allowing customization for specific scientific domains
+The structure supports versioned data releases through GitHub and Zenodo, reuse of metadata across platforms (DataCite, Dryad, institutional repositories), and consistency across projects while allowing domain-specific additions.
 
 ---
 
-## Usage Instructions
+## Usage
 
-This folder provides the core metadata structure for your project.
+### Step 1. Fill in `project-metadata.xlsx`
 
-### Step 1: Fill in `metadata.xlsx`
-- Open the Excel file and complete the following sheets:
-  - `metadata`: General record information (title, version, date, subjects, etc.)
-  - `authors`: List of contributors with ORCID, affiliations, and roles
-  - `funders`: Funder name, grant number, and ROR ID
-  - `communities`: (Optional) Zenodo community IDs
-  - `dates`: Important dates (e.g., accepted, submitted)
+Complete these sheets.
+- `metadata` holds general record information (title, version, date, subjects, licence, repository).
+- `authors` lists contributors with ORCID, affiliations and roles.
+- `funders` gives funder name, ROR ID, grant title and grant number.
+- `communities` (optional) lists Zenodo community IDs.
+- `dates` records important dates (e.g. accepted, submitted) as YYYY-MM-DD.
 
-### Step 2: Edit `CITATION.cff`
+Leave a cell empty when a value is unknown. Never guess an ORCID, ROR ID or grant number.
 
-Run the accompanying R script to parse Excel metadata into .cff:
+### Step 2. Generate `CITATION.cff`
 
 ```r
-source("script/helper/helper-01-parse-metadata-as-cff.")
+source("script/helper/helper-01-parse-metadata-as-cff.R")
 ```
 
-Ensure your `CITATION.cff` file at the root of the repo reflects your authors and repository URL. This enables GitHub-Zenodo citation integration.
+This writes `CITATION.cff` at the root of the repository, where GitHub and Zenodo read it. Check that it lists your authors and repository URL.
 
-### Step 3: Convert to `metadata.json`
-Run the accompanying R script to parse Excel metadata into JSON:
+### Step 3. Validate and generate `project-metadata.json`
 
 ```r
 source("script/helper/helper-02-parse-metadata-as-json.R")
 ```
 
-This will generate a [DataCite](https://datacite-metadata-schema.readthedocs.io/en/4.6/) compliant metadata.
+The script first checks required fields, ORCID format, date format and author names, and prints any problem. It then writes [DataCite](https://datacite-metadata-schema.readthedocs.io/en/4.6/) metadata to `project-metadata.json`.
 
+### Step 4. Describe your data
 
-### Step 4: Publish to Zenodo
-- **GitHub Release**: Make a GitHub release and Zenodo will generate a DOI using `CITATION.cff`.
-- **Manual Upload**: Use the metadata fields or paste from the generated JSON file.
-- **API Upload**: Use `zenodo_metadata.json` in a POST request to the Zenodo API.
+Write a data dictionary for each dataset in `data/`, with the columns `Name`, `Description`, `OntologyID`, `ValueType`, `Unit` and `ControlledVocabulary`. Use [Crop Ontology](https://cropontology.org/) IDs for traits where they exist.
 
----
+### Step 5. Register provenance in `provenance.json`
 
-## Tip
+For each script, list its inputs, outputs, decision record and test. For each input, give its source, protocol, licence, access conditions and citation. Write `null` for anything unknown rather than a guess. The test of each script checks that every file listed here exists.
 
-To validate your metadata before submission, use the validation script (`script/validate_metadata.R`, coming soon).
+### Step 6. Publish to Zenodo
+
+- **GitHub release.** Create a release and Zenodo generates a DOI using `CITATION.cff`.
+- **Manual upload.** Copy the fields from `project-metadata.json`.
+- **API upload.** Send `project-metadata.json` in a request to the Zenodo API.
+
+Update the version in `project-metadata.xlsx` before each release and regenerate both files, so `CITATION.cff`, `project-metadata.json` and `provenance.json` carry the same version.

@@ -23,3 +23,11 @@
 # R Environment Variables
 .Renviron
 
+
+# renv project library (renv.lock and renv/activate.R stay in the repository)
+renv/library/
+renv/local/
+renv/staging/
+renv/cellar/
+renv/python/
+

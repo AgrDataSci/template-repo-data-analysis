@@ -1,0 +1,19 @@
+# FAIR and AI-ready template for data analysis projects
+
+> A project scaffold for R analyses that people and AI assistants can rerun, trace and cite. Each script comes with a decision record, a test and a provenance entry linking its outputs to the data, protocol and evidence behind them. Part of the AgrDataSci ai-ready-documentation suite.
+
+Read SKILL.md before helping a user. It holds the rules, the conventions and the file index.
+
+## Core files
+
+- [SKILL.md](https://raw.githubusercontent.com/AgrDataSci/template-repo-data-analysis/main/SKILL.md): rules, conventions and the index of files
+- [AGENTS.md](https://raw.githubusercontent.com/AgrDataSci/template-repo-data-analysis/main/AGENTS.md): short instructions for AI agents
+- [README.md](https://raw.githubusercontent.com/AgrDataSci/template-repo-data-analysis/main/README.md): overview and setup steps
+- [metadata/provenance.json](https://raw.githubusercontent.com/AgrDataSci/template-repo-data-analysis/main/metadata/provenance.json): links between outputs, code, data, protocols and evidence
+
+## Optional
+
+- [decisions/_template.md](https://raw.githubusercontent.com/AgrDataSci/template-repo-data-analysis/main/decisions/_template.md): template for a methodological decision record
+- [decisions/01-example-plackett-luce-concept-testing.md](https://raw.githubusercontent.com/AgrDataSci/template-repo-data-analysis/main/decisions/01-example-plackett-luce-concept-testing.md): a filled example
+- [metadata/README.md](https://raw.githubusercontent.com/AgrDataSci/template-repo-data-analysis/main/metadata/README.md): metadata, citation and Zenodo publication
+- [ai-ready-documentation](https://github.com/AgrDataSci/ai-ready-documentation): index of the linked repositories

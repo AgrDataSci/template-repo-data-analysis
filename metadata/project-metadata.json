@@ -5,18 +5,18 @@
     }
   ],
   "publisher": "Zenodo",
-  "publicationYear": "2025",
+  "publicationYear": "2026",
   "resourceType": {
     "resourceTypeGeneral": "Dataset",
     "resourceType": "Dataset"
   },
   "descriptions": [
     {
-      "description": "This is a generic template to allow scientists in using a well structured data workflow following the project-oriented approach and findable accessible interoperable and reusable (FAIR) principles for data and code publication in science. The project contains a example of data from the CIMMYT market intelligence research (Donovan et al 2025, https://doi.org/10.1017/S001447972500002X) with data description and an example of R script for analysis and documentation. Feel free to delete the example files once the project is adapted for your needs.",
+      "description": "A generic template for well-structured, FAIR and reproducible data analysis projects that people and AI assistants can rerun, trace and cite. It follows the project-oriented approach and includes metadata for DataCite and Zenodo, methodological decision records, provenance links from outputs to data, protocols and evidence, tests run on every push, and a skill for AI assistants. The worked example uses data from the CIMMYT market intelligence research (Donovan et al 2025, https://doi.org/10.1017/S001447972500002X). Delete the example files once the project is adapted to your needs.",
       "descriptionType": "Abstract"
     }
   ],
-  "version": "v1.2",
+  "version": "v1.3",
   "language": "eng",
   "rightsList": [
     {
@@ -38,6 +38,12 @@
     },
     {
       "subject": "open science"
+    },
+    {
+      "subject": "reproducibility"
+    },
+    {
+      "subject": "AI-ready documentation"
     }
   ],
   "creators": [

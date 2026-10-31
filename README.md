@@ -2,7 +2,7 @@
 [![License](https://img.shields.io/badge/License-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/deed.en) 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15224388.svg)](https://doi.org/10.5281/zenodo.15224388)
 [![Check analysis](https://github.com/AgrDataSci/template-repo-data-analysis/actions/workflows/check.yml/badge.svg)](https://github.com/AgrDataSci/template-repo-data-analysis/actions/workflows/check.yml)
-<!-- badges: end --> 
+<!-- badges: end -->  
 
 ## A FAIR and project-oriented template for open science data workflows
 > Kauê de Sousa, Marie-Angélique Laporte

@@ -2,7 +2,7 @@
 
 All data used in the analysis go here. If a file is too large for GitHub, document it here and give a persistent link (e.g. a Zenodo DOI) to access it.
 
-Describe every dataset in a data dictionary in `metadata/`, one row per variable, with its description, type, unit, allowed values and Crop Ontology ID where one exists. See `metadata/example-metadata-data-mip-uganda.csv`. Register each dataset in `metadata/provenance.json` with its source, protocol, licence and access conditions.
+Describe every dataset in a data dictionary in `metadata/`, one row per variable, with its description, type, unit, allowed values and Crop Ontology ID where one exists. See `metadata/example-metadata-data-mip-uganda.csv`. Register each dataset in `metadata/provenance.json` with its source, protocol, license and access conditions.
 
 Hint 1. Avoid spaces in file names and use "-" or "_" to separate words, e.g. "bean-data-arusha.csv" instead of "Bean data Arusha.csv".
 

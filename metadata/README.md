@@ -18,7 +18,7 @@ The structure supports versioned data releases through GitHub and Zenodo, reuse 
 ### Step 1. Fill in `project-metadata.xlsx`
 
 Complete these sheets.
-- `metadata` holds general record information (title, version, date, subjects, licence, repository).
+- `metadata` holds general record information (title, version, date, subjects, license, repository).
 - `authors` lists contributors with ORCID, affiliations and roles.
 - `funders` gives funder name, ROR ID, grant title and grant number.
 - `communities` (optional) lists Zenodo community IDs.
@@ -48,7 +48,7 @@ Write a data dictionary for each dataset in `data/`, with the columns `Name`, `D
 
 ### Step 5. Register provenance in `provenance.json`
 
-For each script, list its inputs, outputs, decision record and test. For each input, give its source, protocol, licence, access conditions and citation. Write `null` for anything unknown rather than a guess. The test of each script checks that every file listed here exists.
+For each script, list its inputs, outputs, decision record and test. For each input, give its source, protocol, license, access conditions and citation. Write `null` for anything unknown rather than a guess. The test of each script checks that every file listed here exists.
 
 ### Step 6. Publish to Zenodo
 

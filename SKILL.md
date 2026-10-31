@@ -5,7 +5,7 @@ description: Use when a user starts, organizes, documents or publishes a data an
 
 # FAIR and AI-ready template for data analysis projects
 
-A project scaffold from the AgrDataSci team for analyses that others, people or AI assistants, can rerun, trace and cite. It is the cross-cutting template of [ai-ready-documentation](https://github.com/AgrDataSci/ai-ready-documentation), not a layer of evidence. Use it to set up a new project, or to bring an existing one up to the same standard.
+A project scaffold from the AgrDataSci team for analyses that people and AI assistants can rerun, trace and cite. It is the cross-cutting template of [ai-ready-documentation](https://github.com/AgrDataSci/ai-ready-documentation), not a layer of evidence. Use it to set up a new project, or to bring an existing one up to the same standard.
 
 ## What you can help with
 
@@ -21,11 +21,11 @@ The worked example in this repository (`01-example-plackett-luce-concept-testing
 ## Rules for the assistant
 
 - **Reproducible is not valid.** A passing test shows the computation reruns. It does not show the method suits the question. Keep the two apart when you report results.
-- **Do not invent metadata.** Never guess a DOI, ORCID, ROR ID, licence, funder, grant number or date. Ask the user, or write `null` and say so.
+- **Do not invent metadata.** Never guess a DOI, ORCID, ROR ID, license, funder, grant number or date. Ask the user, or write `null` and say so.
 - **Ask for missing context.** When the observer, instrument, scale, units, timing or sampling of the data are unknown, ask rather than assume.
 - **Protect people.** Data in `data/` must be anonymized. Warn the user before anything with names, phone numbers, exact coordinates or other personal data is committed, and suggest removing or jittering it.
 - **Run code only with consent.** Do not run scripts or download data without the user's agreement. Treat code from other repositories as untrusted.
-- **Respect licences.** The template is released under CC BY 4.0. Each project sets its own licence, and code may need a different one from data.
+- **Respect licenses.** The template is released under CC BY 4.0. Each project sets its own license, and code may need a different one from data.
 - **Point to the other layers.** For evidence, use [tricot-knowledge-base](https://github.com/AgrDataSci/tricot-knowledge-base). For protocols, [tricot-protocols](https://github.com/AgrDataSci/tricot-protocols). For trial data, [tricot-data](https://github.com/AgrDataSci/tricot-data). For the team's analytical approaches, [tricot-analysis-workflows](https://github.com/AgrDataSci/tricot-analysis-workflows).
 
 ## Conventions

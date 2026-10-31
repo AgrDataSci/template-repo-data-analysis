@@ -22,33 +22,38 @@ address:
     city: Montpellier
     country: France
 abstract: |
-  Managing research data in accordance with the FAIR principles (Findable, Accessible, Interoperable, and Reusable) is essential for ensuring transparency, reproducibility, and effective scientific collaboration [@Wilkinson2016]. Reproducibility, the ability to repeat an analysis, and replicability, the ability to repeat an experiment under similar conditions [@Stevens2017], are foundational to trustworthy and collaborative science [@Powers2019; @Munafo2017]. These practices enable researchers to revisit analyses after extended periods and allow peers to verify results or generate new insights from existing data. In this context, we present a structured and reusable repository template specifically designed to support FAIR data workflows and promote both reproducibility and replicability across research projects.
-keywords: 
+  Managing research data in accordance with the FAIR principles (Findable, Accessible, Interoperable, and Reusable) is essential for transparency, reproducibility, and effective scientific collaboration [@Wilkinson2016]. Reproducibility, the ability to repeat an analysis, and replicability, the ability to repeat an experiment under similar conditions [@Stevens2017], are foundational to trustworthy and collaborative science [@Powers2019; @Munafo2017]. These practices let researchers revisit analyses after long periods and let peers verify results or generate new insights from existing data. Researchers now also work with AI assistants, which can only reuse an analysis well when its structure, reasoning and sources are written down explicitly. We present a structured and reusable repository template that supports FAIR data workflows, promotes reproducibility and replicability, and makes each analysis traceable by people and AI assistants alike. Version 1.3 adds methodological decision records, provenance links from outputs to data, protocols and evidence, automated tests, pinned package versions, and instructions for AI assistants.
+keywords:
  - data management
  - metadata
  - FAIR principles
  - reproducibility
  - open science
-journal: "CGSpace"
+ - AI-ready documentation
+journal: "Zenodo"
 date: "`r Sys.Date()`"
 linenumbers: false
 numbersections: false
 bibliography: paper.bib
-classoption: 3p, authoryear 
-output: 
+classoption: 3p, authoryear
+output:
   rticles::elsevier_article:
     keep_tex: false
 ---
 
 # Suggested citation
 
-> de Sousa, K.; Laporte, M.-A. (2025) A FAIR and project-oriented template for open science data workflows. <https://hdl.handle.net/10568/174310>.
+> de Sousa, K.; Laporte, M.-A. (2026) A FAIR and project-oriented template for open science data workflows. Version 1.3. Zenodo. <https://doi.org/10.5281/zenodo.15224388>.
+
+This paper is also archived on CGSpace at <https://hdl.handle.net/10568/174310>. The most recent version of the template and this paper is always available at <https://doi.org/10.5281/zenodo.15224388>.
 
 \pagebreak
 
 # Statement of need
 
-Data-driven research faces several challenges, including inadequate data documentation, inconsistent structure, and poor reproducibility [@Wilkinson2016; @Munafo2017]. Researchers often struggle with these aspects, lacking practical examples or accessible tools. To address these issues, we created a project-oriented, easy-to-use data template. It streamlines metadata management, facilitates reproducibility, and ensures alignment with FAIR principles.
+Data-driven research faces several challenges, including inadequate data documentation, inconsistent structure, and poor reproducibility [@Wilkinson2016; @Munafo2017]. Researchers often struggle with these aspects for lack of practical examples and accessible tools. To address these issues, we created a project-oriented, easy-to-use template for data analysis. It streamlines metadata management, facilitates reproducibility, and aligns projects with the FAIR principles.
+
+A second need has grown since the first release. Researchers increasingly ask AI assistants to explain, rerun or adapt analyses. An assistant can reuse code, but it cannot recover the reasoning behind it, the conditions under which the data were collected, or the limits of what the results show, unless these are documented. Without that documentation, an assistant may present a method as validated because it appears in a repository, or invent metadata it cannot find. Version 1.3 addresses this need by recording why each analysis was done, linking every output to its sources, and giving assistants explicit rules.
 
 # Repository structure
 
@@ -56,43 +61,76 @@ The template repository includes clear, intuitive folder structures and essentia
 
 ```text
 template-repo-data-analysis/
-|-- data/                                       # Anonimized raw and cleaned datasets
-|-- docs/                                       # Reports or additional documentation
-|-- metadata/                                   # Metadata files and templates
-|    |-- project-metadata.xlsx                  # Project metadata
-|    |-- project-metadata.json                  # Project metadata for DataCite
-|    |-- example-metadata-data-mip-uganda.csv   # Description of the dataset (example)
-|    |-- README.md    
-|-- output/                                     # Model results, figures, tables
-|-- script/                                     # Data analysis scripts
-|-- .gitignore                                  # List of files to exclude from Git
-|-- LICENSE                                     # License stablishing the rights to use
-|-- CITATION.cff                                # Used by Zenodo to generate citation
-|-- template-repo-data-analysis.Rproj           # RStudio file to set up the environment 
-|-- README.md                                   # Project overview
+|-- data/                         # Anonymized raw and cleaned datasets
+|-- decisions/                    # One decision record per script
+|    |-- _template.md             # Template for a new record
+|-- docs/                         # Reports, papers or other documentation
+|-- metadata/                     # Metadata files and templates
+|    |-- project-metadata.xlsx    # Project metadata, edited by hand
+|    |-- project-metadata.json    # DataCite metadata, generated
+|    |-- provenance.json          # Links outputs to code, data and evidence
+|    |-- example-metadata-*.csv   # Data dictionary of the example dataset
+|-- output/                       # Model results, figures, tables
+|-- script/                       # Analysis scripts, run in numeric order
+|    |-- helper/                  # Environment setup, metadata generation
+|-- tests/                        # One test per analysis script
+|-- .github/workflows/            # Runs tests, renders the paper
+|-- renv/, renv.lock, .Rprofile  # Pinned R package versions
+|-- AGENTS.md                     # Short instructions for AI agents
+|-- SKILL.md                      # Skill for AI assistants
+|-- llms.txt                      # Entry point for AI tools on the web
+|-- CITATION.cff                  # Citation metadata for GitHub and Zenodo
+|-- LICENSE                       # Terms for reusing the work
+|-- template-repo-data-analysis.Rproj
+|-- README.md                     # Project overview
 ```
 
 # Key features
 
--   FAIR-aligned metadata: Comprehensive metadata files (.xlsx, .json) aligned with Zenodo (<https://zenodo.org>) and DataCite [@RobinsonGarcia2017] schemas.
--   Automated workflows: R scripts [@CRAN] to validate and convert metadata, ensuring consistent quality.
--   Citation integration: A CITATION.cff file for automatic citation generation.
--   Reproducibility: Scripts and clear instructions ensure any researcher can reproduce results.
--   Open and collaborative: Open licensing (CC BY 4.0, <https://creativecommons.org>) promotes collaboration, reuse, and attribution.
+-   **FAIR-aligned metadata.** Metadata files (.xlsx, .json) follow the Zenodo (<https://zenodo.org>) and DataCite [@RobinsonGarcia2017] schemas. Data dictionaries describe every variable and use Crop Ontology terms where they exist.
+-   **Automated metadata workflows.** R scripts [@CRAN] validate the metadata and convert them to `CITATION.cff` and DataCite JSON.
+-   **Decision records.** Each analysis script has a record stating the scientific question, the method and why it was chosen, its assumptions, alternatives and diagnostics, and what the results do and do not support.
+-   **Provenance.** A machine-readable file links each output to the script that produced it, the input data, the protocol behind the data, and the published evidence.
+-   **Reproducibility.** The template uses renv (<https://rstudio.github.io/renv/>) to record the exact version of every R package in a lock file, and ships with the lock file of its example, so anyone can rebuild the same environment with one command. Each script also records the software versions of its last run, and each script has a test with documented expected results. The README explains each of these tools step by step for users new to them.
+-   **Continuous checks.** GitHub Actions runs every test on each push, so the repository always shows whether its computations still reproduce.
+-   **AI readiness.** `SKILL.md`, `AGENTS.md` and `llms.txt` tell AI assistants how the project is organized, which conventions to follow, and which rules to respect.
+-   **Citation integration.** A `CITATION.cff` file lets GitHub and Zenodo generate citations and DOIs.
+-   **Open and collaborative.** Open licensing (CC BY 4.0, <https://creativecommons.org>) promotes collaboration, reuse, and attribution.
+
+# AI-ready documentation
+
+The template belongs to ai-ready-documentation (<https://github.com/AgrDataSci/ai-ready-documentation>), a family of linked repositories that make the tricot approach to on-farm testing usable by people and AI assistants. Each repository in the family covers one layer, namely the published evidence, the field protocols, the trial data and the analytical approaches, and each shares the same skeleton of `SKILL.md`, `README.md`, `CITATION.cff` and `LICENSE`. The template is not itself a layer of evidence. It is the scaffold from which any layer, or any research project, can start.
+
+Two principles guide the design. First, reproducing a computation is different from validating an interpretation. A passing test shows that the code reruns and gives the expected numbers, while the decision record states whether the method suits the question and what the results cannot support. Second, missing information is stated rather than filled in. The provenance file uses `null` for unknown values, and the instructions forbid an assistant from guessing a DOI, ORCID, license, funder or date.
+
+# Worked example
+
+The template ships with a complete example that shows every component together. The data are rankings from 150 farmers in Uganda who each watched three of eight video-based maize hybrid concepts and named the most and least preferred, drawn from a product concept testing study in Kenya and Uganda [@Donovan2025]. A data dictionary describes each variable. The analysis script fits a Plackett-Luce model to the rankings [@Turner2020] and saves the estimates and a plot. Its decision record explains why this model fits tricot rankings, states its assumptions and alternatives, and limits the conclusions to relative preference within the sample, not adoption or market size.
+
+The test checks that the 150 rankings are complete, that all eight concepts receive finite estimates, and that the most and least preferred concepts match an independent fit of the same data. Drought Avoidance, Intercropping and Resilient are the most preferred concepts and Feed Variety the least preferred, consistent with the full study [@Donovan2025]. The order within the top three is close, so the test checks the group rather than the exact order.
 
 # Implementation and usage
 
-Researchers can easily adopt this repository by:
+Researchers adopt the template in these steps.
 
-1.  Cloning the repository from GitHub (<https://github.com/AgrDataSci/template-repo-data-analysis>).
-2.  Adding their data and performing their analysis.
-3.  Filling in the provided project-metadata.xlsx template.
-4.  Running provided R scripts for validation and metadata generation.
-5.  Publishing via integrated platforms like Zenodo for long-term archiving and DOI assignment.
+1.  Copy the repository from GitHub (<https://github.com/AgrDataSci/template-repo-data-analysis>) and install the pinned package versions with the setup helper script.
+2.  Add the data and describe each variable in a data dictionary.
+3.  Write the analysis in numbered scripts, each with a decision record and a test.
+4.  Register inputs, outputs, protocols and evidence in the provenance file.
+5.  Fill in the provided `project-metadata.xlsx` template and run the R scripts for validation and metadata generation.
+6.  Publish through Zenodo for long-term archiving and DOI assignment.
+
+# What is new in version 1.3
+
+Version 1.3 adds decision records, the provenance file, tests with continuous checks on GitHub, pinned package versions, and instructions for AI assistants. The README now explains key terms and each tool in plain language for students and researchers new to data management. The example script now checks the rankings before fitting the model and saves its outputs. The documentation was revised throughout, and the template now links to the other repositories of ai-ready-documentation.
 
 # Conclusion
 
-Adopting structured, FAIR-aligned workflows can significantly enhance reproducibility, collaboration, and transparency in research. This template provides a practical starting point, promoting best practices from the outset of research projects.
+Structured, FAIR-aligned workflows enhance reproducibility, collaboration, and transparency in research. By recording why each analysis was done and where every result comes from, this template also lets AI assistants reuse the work without overstating it. It provides a practical starting point that promotes these practices from the outset of a research project.
+
+# Code and data availability
+
+The template, the example data and this paper are openly available on GitHub at <https://github.com/AgrDataSci/template-repo-data-analysis> and archived on Zenodo at <https://doi.org/10.5281/zenodo.15224388>, under a CC BY 4.0 license.
 
 # Acknowledgments
 

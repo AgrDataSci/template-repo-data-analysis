@@ -6,6 +6,6 @@ video_a,name of the first concept tested,,string,,
 video_b,name of the second concept tested,,string,,
 video_c,name of the third concept tested,,string,,
 variety_preferred,which variety was preferred among the three tested,CO_322:0001182,vocabulary encoding scheme,,A|B|C
-reason_preferred,the open ended answer from the participant indicating why they preferred the concept,,text,,
+reason_preferred,the open-ended answer from the participant indicating why they preferred the concept,,text,,
 variety_lesspreferred,which variety was less preferred among the three tested,CO_322:0001182,vocabulary encoding scheme,,A|B|C
-reason_lesspreferred,the open ended answer from the participant indicating why they did not preferred the concept,,text,,
+reason_lesspreferred,the open-ended answer from the participant indicating why they did not prefer the concept,,text,,

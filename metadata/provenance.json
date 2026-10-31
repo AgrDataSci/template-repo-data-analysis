@@ -1,0 +1,96 @@
+{
+  "description": "Links every output of this project to the code, data, protocol and evidence behind it, so a person or an AI agent can trace a result back to its sources. Replace the example entries with your own. Use null where a value is unknown, never a guess.",
+  "chain": "claim -> output -> code -> input data -> protocol -> evidence",
+  "project": {
+    "title": "A FAIR and project-oriented template for open science data workflows",
+    "repository": "https://github.com/AgrDataSci/template-repo-data-analysis",
+    "version": "v1.3",
+    "doi": "https://doi.org/10.5281/zenodo.15224389",
+    "license": "CC-BY-4.0",
+    "citation": "CITATION.cff"
+  },
+  "inputs": [
+    {
+      "id": "data-mip-uganda",
+      "path": "data/example-data-mip-uganda.csv",
+      "data_dictionary": "metadata/example-metadata-data-mip-uganda.csv",
+      "description": "Rankings of three video-based maize hybrid concepts by 150 farmers in Uganda, with respondent gender, age and household size",
+      "producer": "CIMMYT market intelligence",
+      "protocol": "protocol-vpct",
+      "citation": "evidence-donovan-2025",
+      "doi": null,
+      "license": "CC-BY-4.0, as released in this repository",
+      "access": "open",
+      "personal_data": "no direct identifiers; free-text answers kept as given"
+    }
+  ],
+  "protocols": [
+    {
+      "id": "protocol-vpct",
+      "name": "Video-based product concept testing (VPCT) with tricot rankings",
+      "source": "Methods section of Donovan et al. 2025",
+      "url": "https://doi.org/10.1017/S001447972500002X",
+      "in_tricot_protocols": false
+    }
+  ],
+  "code": [
+    {
+      "id": "script-01",
+      "path": "script/01-example-plackett-luce-concept-testing.R",
+      "inputs": ["data-mip-uganda"],
+      "outputs": ["output-01-estimates", "output-01-plot", "output-01-session"],
+      "decision": "decisions/01-example-plackett-luce-concept-testing.md",
+      "test": "tests/test-01-example-plackett-luce-concept-testing.R",
+      "language": "R",
+      "packages": ["gosset", "PlackettLuce", "ggplot2", "sessioninfo"]
+    }
+  ],
+  "outputs": [
+    {
+      "id": "output-01-estimates",
+      "path": "output/pl-estimates-maize-concepts.csv",
+      "description": "Plackett-Luce log-worth estimates and standard errors for eight maize concepts",
+      "produced_by": "script-01"
+    },
+    {
+      "id": "output-01-plot",
+      "path": "output/pl-estimates-maize-concepts.pdf",
+      "description": "Plot of the Plackett-Luce estimates",
+      "produced_by": "script-01"
+    },
+    {
+      "id": "output-01-session",
+      "path": "script/session-info/01-example-plackett-luce-concept-testing.txt",
+      "description": "R and package versions used in the last run",
+      "produced_by": "script-01"
+    }
+  ],
+  "decisions": [
+    {
+      "id": "decision-01",
+      "path": "decisions/01-example-plackett-luce-concept-testing.md",
+      "status": "tested-on-synthetic-data"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "evidence-donovan-2025",
+      "citation": "Donovan J, Rutsaert P, Mawia H, de Sousa K, van Etten J (2025). Farmers' preferences for the next generation of maize hybrids. Application of product concept testing in Kenya and Uganda. Experimental Agriculture 61, e5.",
+      "doi": "https://doi.org/10.1017/S001447972500002X",
+      "card": "https://github.com/AgrDataSci/tricot-knowledge-base/blob/main/papers/donovan-2025-expagric.md"
+    },
+    {
+      "id": "evidence-turner-2020",
+      "citation": "Turner HL, van Etten J, Firth D, Kosmidis I (2020). Modelling rankings in R. The PlackettLuce package. Computational Statistics.",
+      "doi": "https://doi.org/10.1007/s00180-020-00959-3",
+      "card": "https://github.com/AgrDataSci/tricot-knowledge-base/blob/main/papers/turner-2020-compstat.md"
+    }
+  ],
+  "related_resources": [
+    {"name": "ai-ready-documentation", "role": "index of the layers", "url": "https://github.com/AgrDataSci/ai-ready-documentation"},
+    {"name": "tricot-knowledge-base", "role": "evidence layer", "url": "https://github.com/AgrDataSci/tricot-knowledge-base"},
+    {"name": "tricot-protocols", "role": "protocol layer", "url": "https://github.com/AgrDataSci/tricot-protocols"},
+    {"name": "tricot-data", "role": "data layer", "url": "https://github.com/AgrDataSci/tricot-data"},
+    {"name": "tricot-analysis-workflows", "role": "analysis layer", "url": "https://github.com/AgrDataSci/tricot-analysis-workflows"}
+  ]
+}

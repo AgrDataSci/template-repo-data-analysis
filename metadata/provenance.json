@@ -69,7 +69,7 @@
     {
       "id": "decision-01",
       "path": "decisions/01-example-plackett-luce-concept-testing.md",
-      "status": "reviewed-not-executed"
+      "status": "tested-on-synthetic-data"
     }
   ],
   "evidence": [

@@ -1,6 +1,6 @@
 # Which maize product concepts do farmers in Uganda prefer?
 
-**Status:** reviewed-not-executed (change to tested-on-synthetic-data once the GitHub check passes)
+**Status:** tested-on-synthetic-data (runs and passes its tests on the example data in the GitHub check)
 **Script:** `script/01-example-plackett-luce-concept-testing.R`
 **Test:** `tests/test-01-example-plackett-luce-concept-testing.R`
 **Input data:** `data/example-data-mip-uganda.csv`, described in `metadata/example-metadata-data-mip-uganda.csv`

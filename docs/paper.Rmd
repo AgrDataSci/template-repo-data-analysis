@@ -95,7 +95,7 @@ template-repo-data-analysis/
 -   **Continuous checks.** GitHub Actions runs every test on each push, so the repository always shows whether its computations still reproduce.
 -   **AI readiness.** `SKILL.md`, `AGENTS.md` and `llms.txt` tell AI assistants how the project is organized, which conventions to follow, and which rules to respect.
 -   **Citation integration.** A `CITATION.cff` file lets GitHub and Zenodo generate citations and DOIs.
--   **Open and collaborative.** Open licensing (CC BY 4.0, <https://creativecommons.org>) promotes collaboration, reuse, and attribution.
+-   **Open and collaborative.** Open licensing (MIT for the template) promotes collaboration, reuse, and attribution.
 
 # AI-ready documentation
 
@@ -130,7 +130,7 @@ Structured, FAIR-aligned workflows enhance reproducibility, collaboration, and t
 
 # Code and data availability
 
-The template, the example data and this paper are openly available on GitHub at <https://github.com/AgrDataSci/template-repo-data-analysis> and archived on Zenodo at <https://doi.org/10.5281/zenodo.15224388>, under a CC BY 4.0 license.
+The template, the example data and this paper are openly available on GitHub at <https://github.com/AgrDataSci/template-repo-data-analysis> and archived on Zenodo at <https://doi.org/10.5281/zenodo.15224388>. The template and this paper are released under the MIT License, and the example data keep their CC BY 4.0 license.
 
 # Acknowledgments
 

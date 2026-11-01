@@ -6,7 +6,7 @@
     "repository": "https://github.com/AgrDataSci/template-repo-data-analysis",
     "version": "v1.3",
     "doi": "https://doi.org/10.5281/zenodo.15224388",
-    "license": "CC-BY-4.0",
+    "license": "MIT",
     "citation": "CITATION.cff"
   },
   "inputs": [
@@ -19,7 +19,7 @@
       "protocol": "protocol-vpct",
       "citation": "evidence-donovan-2025",
       "doi": null,
-      "license": "CC-BY-4.0, as released in this repository",
+      "license": "CC-BY-4.0, as released by the data producer",
       "access": "open",
       "personal_data": "no direct identifiers; free-text answers kept as given"
     }

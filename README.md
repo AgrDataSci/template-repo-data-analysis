@@ -3,7 +3,7 @@
 [![Check analysis](https://github.com/AgrDataSci/template-repo-data-analysis/actions/workflows/check.yml/badge.svg)](https://github.com/AgrDataSci/template-repo-data-analysis/actions/workflows/check.yml)
 [![ProjStatus](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![Lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
-[![License](https://img.shields.io/badge/license-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/AgrDataSci/template-repo-data-analysis/blob/main/LICENSE)
 <!-- badges: end -->  
 
 ## A FAIR and project-oriented template for open science data workflows

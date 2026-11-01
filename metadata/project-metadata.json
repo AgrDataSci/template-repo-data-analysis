@@ -20,9 +20,9 @@
   "language": "eng",
   "rightsList": [
     {
-      "rights": "Creative Commons Attribution 4.0 International",
-      "rightsUri": "https://creativecommons.org/licenses/by/4.0/",
-      "rightsIdentifier": "cc-by-4.0",
+      "rights": "MIT License",
+      "rightsUri": "https://opensource.org/licenses/MIT",
+      "rightsIdentifier": "mit",
       "rightsIdentifierScheme": "SPDX"
     }
   ],

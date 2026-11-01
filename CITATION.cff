@@ -13,7 +13,7 @@ authors:
     orcid: https://orcid.org/0000-0002-8461-9745
     affiliation: "Bioversity International"
 repository-code: https://github.com/AgrDataSci/template-repo-data-analysis
-license: CC-BY-4.0
+license: MIT
 keywords:
   - data-driven research
   - FAIR principles

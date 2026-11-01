@@ -61,6 +61,19 @@ get_meta = function(key) {
   return(as.character(val))
 }
 
+# License from the metadata sheet (SPDX identifier, e.g. mit, cc0-1.0, cc-by-4.0)
+licenses = list(
+  "mit" = c("MIT License", "https://opensource.org/licenses/MIT"),
+  "cc0-1.0" = c("Creative Commons Zero v1.0 Universal", "https://creativecommons.org/publicdomain/zero/1.0/"),
+  "cc-by-4.0" = c("Creative Commons Attribution 4.0 International", "https://creativecommons.org/licenses/by/4.0/"),
+  "cc-by-sa-4.0" = c("Creative Commons Attribution Share Alike 4.0 International", "https://creativecommons.org/licenses/by-sa/4.0/")
+)
+license_id = tolower(get_meta("license"))
+license_info = licenses[[license_id]]
+if (is.null(license_info)) {
+  stop("Unknown license '", license_id, "'. Use one of: ", paste(names(licenses), collapse = ", "))
+}
+
 # Build DataCite metadata structure
 datacite = list(
   titles = list(list(title = get_meta("title"))),
@@ -74,9 +87,9 @@ datacite = list(
   version = get_meta("version"),
   language = get_meta("language"),
   rightsList = list(list(
-    rights = "Creative Commons Attribution 4.0 International",
-    rightsUri = "https://creativecommons.org/licenses/by/4.0/",
-    rightsIdentifier = "cc-by-4.0",
+    rights = license_info[1],
+    rightsUri = license_info[2],
+    rightsIdentifier = license_id,
     rightsIdentifierScheme = "SPDX"
   )),
   subjects = lapply(strsplit(get_meta("subjects"), ";\\s*")[[1]], function(s) list(subject = s)),

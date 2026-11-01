@@ -43,7 +43,7 @@ jobs:
 
       - name: Commit the PDF if it changed
         run: |
-          if git diff --quiet -- docs/paper.pdf; then
+          if [ -z "$(git status --porcelain -- docs/paper.pdf)" ]; then
             echo "PDF already up to date."
           else
             git config user.name "github-actions[bot]"

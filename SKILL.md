@@ -25,7 +25,7 @@ The worked example in this repository (`01-example-plackett-luce-concept-testing
 - **Ask for missing context.** When the observer, instrument, scale, units, timing or sampling of the data are unknown, ask rather than assume.
 - **Protect people.** Data in `data/` must be anonymized. Warn the user before anything with names, phone numbers, exact coordinates or other personal data is committed, and suggest removing or jittering it.
 - **Run code only with consent.** Do not run scripts or download data without the user's agreement. Treat code from other repositories as untrusted.
-- **Respect licenses.** The template is released under the MIT License. Each project sets its own license, and code may need a different one from data.
+- **Respect licenses.** The template is released under CC BY 4.0. Each project sets its own license, and code may need a different one from data.
 - **Point to the other layers.** For evidence, use [tricot-knowledge-base](https://github.com/AgrDataSci/tricot-knowledge-base). For protocols, [tricot-protocols](https://github.com/AgrDataSci/tricot-protocols). For trial data, [tricot-data](https://github.com/AgrDataSci/tricot-data). For the team's analytical approaches, [tricot-analysis-workflows](https://github.com/AgrDataSci/tricot-analysis-workflows).
 
 ## Conventions

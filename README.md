@@ -3,7 +3,7 @@
 [![Check analysis](https://github.com/AgrDataSci/template-repo-data-analysis/actions/workflows/check.yml/badge.svg)](https://github.com/AgrDataSci/template-repo-data-analysis/actions/workflows/check.yml)
 [![ProjStatus](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 [![Lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)](https://lifecycle.r-lib.org/articles/stages.html#stable)
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/AgrDataSci/template-repo-data-analysis/blob/main/LICENSE)
+[![License](https://img.shields.io/badge/license-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
 <!-- badges: end -->  
 
 ## A FAIR and project-oriented template for open science data workflows
@@ -245,3 +245,7 @@ Cite the template with [CITATION.cff](CITATION.cff).
 - [Project-Oriented Workflows in R](https://www.tidyverse.org/blog/2017/12/workflow-vs-script/)
 - [renv](https://rstudio.github.io/renv/)
 - [ai-ready-documentation](https://github.com/AgrDataSci/ai-ready-documentation)
+
+## License
+
+The template is released under [CC BY 4.0](LICENSE), with rights held by the International Plant Genetic Resources Institute (Bioversity International). Projects created from it set their own license. Use CC0 1.0 for data and the MIT License for code.

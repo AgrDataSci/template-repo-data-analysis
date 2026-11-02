@@ -9,5 +9,6 @@ This repository is a template for FAIR and reproducible data analysis projects. 
 5. Never invent a DOI, ORCID, ROR ID, license, funder or date. Ask the user, or write `null` and say so.
 6. Do not run code or download data without the user's agreement. Warn before personal data is committed to `data/`.
 7. Write R with `=` for assignment, run scripts from the project root, and number scripts, tests and decision records alike.
+8. When the user asks you to run an analysis with their data or asks for the scripts, also deliver a reproducible project in the layout of this template. Follow "Deliver an analysis as a project" in `SKILL.md`.
 
 For evidence, protocols, trial data and the team's analytical approaches, follow the links in the "Rules for the assistant" section of `SKILL.md`.

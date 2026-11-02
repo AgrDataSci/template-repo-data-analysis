@@ -18,6 +18,30 @@ A project scaffold from the AgrDataSci team for analyses that people and AI assi
 
 The worked example in this repository (`01-example-plackett-luce-concept-testing`) shows every piece together, from data dictionary to decision record, test and provenance entry.
 
+## Deliver an analysis as a project
+
+When the user asks you to run an analysis and supplies data, or asks for the scripts, return the full analysis as a project in the layout of this template. Show the main results in the chat as usual. The project is an addition, not a replacement.
+
+Skip this for quick exploratory questions, such as checking columns or a single summary, unless the user asks for the files.
+
+1. Name the project folder `<topic>-<YYYYMMDD>`, for example `cassava-trait-preference-20261102`.
+2. Use the folders the analysis needs. Always include `data/`, `script/`, `output/`, `decisions/`, `metadata/` and `README.md`. Add `tests/` and `docs/` when the analysis has them.
+3. Put the user's input in `data/` unchanged. Write cleaned or derived data to `output/` from the scripts, never by hand.
+4. Follow the conventions below for script names, headers and relative paths, so the project runs on any computer.
+5. If the user supplied their own scripts and your scripts differ substantially from them, keep the originals unchanged in `script/user-script/`. Substantial means a different method, model, data filtering or outcome variable, not only renamed objects or updated paths. In the README, list what changed and why, script by script. When the changes are minor, edit the user's scripts in place and note the edits in the README.
+6. Generate every file in `output/` by running the scripts. If you cannot run R, run the analysis in Python or another language you can execute, then translate it to R for `script/`. In that case
+   - keep the code that produced the outputs in `script/other-language/`, so the outputs remain reproducible
+   - mark each R script as untested in its header and in the README
+   - name the packages you used in place of the R ones and say where results may differ
+   - if no faithful equivalent exists for a method, do not approximate it. Deliver the untested R script without that output and tell the user.
+7. Write a decision record per script from `decisions/_template.md`. When the analysis follows a workflow from [tricot-analysis-workflows](https://github.com/AgrDataSci/tricot-analysis-workflows), start from its decision record and note any change to the default method.
+8. Fill `metadata/provenance.json` so each output points to its script, input file and decision record. Never invent a DOI, ORCID, license or funder. Write `null` and tell the user.
+9. Record the software of each run in `script/session-info/`, and pin package versions in `renv.lock` when you can.
+10. In `README.md`, state the scientific question, the method and its status label, the version of any workflow you used, how to rerun the analysis, and what the results cannot support.
+11. Deliver the project as a zip file by default. Deliver it as a plain folder when the user works in a local project or repository.
+
+Before packaging, check the input for personal data such as names, phone numbers, ID numbers or exact GPS points. Warn the user and ask whether to remove, pseudonymize or keep it. Do not include it by default.
+
 ## Rules for the assistant
 
 - **Reproducible is not valid.** A passing test shows the computation reruns. It does not show the method suits the question. Keep the two apart when you report results.

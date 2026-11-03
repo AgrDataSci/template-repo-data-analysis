@@ -62,6 +62,7 @@ Before packaging, check the input for personal data such as names, phone numbers
 - After the `library()` calls, write the session information to `script/session-info/<script-name>.txt` (see `script/README.md`).
 - After installing or updating a package, run `renv::snapshot()` and commit `renv.lock`. To rebuild the environment, run `renv::restore()`.
 - Comments explain scientific intent and choices, not only mechanics.
+- Draw every map in the Equal Earth projection (EPSG:8857, `+proj=eqearth`), the equal-area world map endorsed by the UN General Assembly in September 2026. It keeps areas at their true relative size, so Africa, where most trials are, is not shrunk. Keep coordinates in WGS84 (EPSG:4326) for storage and calculations, and project only to draw. In R with ggplot2, add `coord_sf(crs = sf::st_crs("EPSG:8857"), default_crs = sf::st_crs(4326))`; with terra, use `terra::project(x, "EPSG:8857")`. Interactive tile maps (leaflet) stay in Web Mercator, which tile services require; say so in the caption.
 
 ## Index
 

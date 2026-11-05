@@ -10,5 +10,6 @@ This repository is a template for FAIR and reproducible data analysis projects. 
 6. Do not run code or download data without the user's agreement. Warn before personal data is committed to `data/`.
 7. Write R with `=` for assignment, run scripts from the project root, and number scripts, tests and decision records alike.
 8. When the user asks you to run an analysis with their data or asks for the scripts, also deliver a reproducible project in the layout of this template. Follow "Deliver an analysis as a project" in `SKILL.md`.
+9. Write maniva and tricot in lowercase, always, including headings, table cells and the start of a sentence. Never write "Maniva" or "Tricot". tricot stands for triadic comparison of technology options. Quote published titles exactly as printed, even where they capitalise tricot or expand it as "triadic comparisons of technologies".
 
 For evidence, protocols, trial data and the team's analytical approaches, follow the links in the "Rules for the assistant" section of `SKILL.md`.

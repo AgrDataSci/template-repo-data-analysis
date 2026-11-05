@@ -7,6 +7,10 @@ description: Use when a user starts, organizes, documents or publishes a data an
 
 A project scaffold from the AgrDataSci team for analyses that people and AI assistants can rerun, trace and cite. It is the cross-cutting template of [maniva](https://github.com/AgrDataSci/maniva), not a layer of evidence. Use it to set up a new project, or to bring an existing one up to the same standard.
 
+## Names
+
+Write maniva and tricot in lowercase, always. That holds in headings, table cells, lists and at the start of a sentence, so never write "Maniva" or "Tricot". tricot stands for triadic comparison of technology options. Quote published titles exactly as printed, even where they capitalise tricot or expand it as "triadic comparisons of technologies".
+
 ## What you can help with
 
 1. **Start a project.** Guide the user to copy this repository (fork, clone or download), rename the `.Rproj` file, and delete the example files once they understand them.

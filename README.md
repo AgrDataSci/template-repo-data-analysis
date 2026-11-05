@@ -6,14 +6,14 @@
 [![License](https://img.shields.io/badge/license-CC%20BY%204.0-blue.svg)](https://creativecommons.org/licenses/by/4.0/)
 <!-- badges: end -->  
 
-<a href="https://github.com/AgrDataSci/ai-ready-documentation"><img src="docs/maniva-logo.svg" alt="Part of Maniva" height="64" align="right"></a>
+<a href="https://github.com/AgrDataSci/ai-ready-documentation"><img src="docs/maniva-logo.svg" alt="Part of maniva" height="64" align="right"></a>
 
 ## A FAIR and project-oriented template for open science data workflows
 > Kauê de Sousa, Marie-Angélique Laporte
 
 A reusable, project-oriented template for data analysis that follows the FAIR principles (Findable, Accessible, Interoperable, Reusable) and is ready for AI assistants. It gives scientific data and code a clear structure, metadata for DataCite and Zenodo, and the documentation an assistant needs to rerun an analysis, trace a result to its sources and cite them.
 
-The template is the cross-cutting resource of [Maniva](https://github.com/AgrDataSci/ai-ready-documentation), the AgrDataSci family of repositories for evidence, protocols, data and analysis. It is not a layer of evidence. It is the scaffold any of those layers, or any research project, can start from.
+The template is the cross-cutting resource of [maniva](https://github.com/AgrDataSci/ai-ready-documentation), the AgrDataSci family of repositories for evidence, protocols, data and analysis. It is not a layer of evidence. It is the scaffold any of those layers, or any research project, can start from.
 
 ---
 
@@ -70,7 +70,7 @@ template-repo-data-analysis/
 - **Reproducibility** through pinned package versions (renv), session information and tests, explained step by step below.
 - **Continuous checks** with GitHub Actions on every push.
 - **Citation support** with `CITATION.cff` and GitHub and Zenodo integration for DOIs.
-- **AI readiness** through `SKILL.md`, `AGENTS.md` and `llms.txt`, following the shared skeleton of Maniva.
+- **AI readiness** through `SKILL.md`, `AGENTS.md` and `llms.txt`, following the shared skeleton of maniva.
 
 ---
 

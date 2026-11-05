@@ -5,7 +5,7 @@ description: Use when a user starts, organizes, documents or publishes a data an
 
 # FAIR and AI-ready template for data analysis projects
 
-A project scaffold from the AgrDataSci team for analyses that people and AI assistants can rerun, trace and cite. It is the cross-cutting template of [Maniva](https://github.com/AgrDataSci/ai-ready-documentation), not a layer of evidence. Use it to set up a new project, or to bring an existing one up to the same standard.
+A project scaffold from the AgrDataSci team for analyses that people and AI assistants can rerun, trace and cite. It is the cross-cutting template of [maniva](https://github.com/AgrDataSci/ai-ready-documentation), not a layer of evidence. Use it to set up a new project, or to bring an existing one up to the same standard.
 
 ## What you can help with
 

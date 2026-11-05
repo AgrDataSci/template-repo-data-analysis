@@ -87,7 +87,7 @@
     }
   ],
   "related_resources": [
-    {"name": "ai-ready-documentation", "role": "index of the layers", "url": "https://github.com/AgrDataSci/ai-ready-documentation"},
+    {"name": "maniva", "role": "index of the layers", "url": "https://github.com/AgrDataSci/maniva"},
     {"name": "tricot-knowledge-base", "role": "evidence layer", "url": "https://github.com/AgrDataSci/tricot-knowledge-base"},
     {"name": "tricot-protocols", "role": "protocol layer", "url": "https://github.com/AgrDataSci/tricot-protocols"},
     {"name": "tricot-data", "role": "data layer", "url": "https://github.com/AgrDataSci/tricot-data"},

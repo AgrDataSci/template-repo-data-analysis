@@ -16,4 +16,4 @@ Read SKILL.md before helping a user. It holds the rules, the conventions and the
 - [decisions/_template.md](https://raw.githubusercontent.com/AgrDataSci/template-repo-data-analysis/main/decisions/_template.md): template for a methodological decision record
 - [decisions/01-example-plackett-luce-concept-testing.md](https://raw.githubusercontent.com/AgrDataSci/template-repo-data-analysis/main/decisions/01-example-plackett-luce-concept-testing.md): a filled example
 - [metadata/README.md](https://raw.githubusercontent.com/AgrDataSci/template-repo-data-analysis/main/metadata/README.md): metadata, citation and Zenodo publication
-- [ai-ready-documentation](https://github.com/AgrDataSci/ai-ready-documentation): index of the linked repositories
+- [maniva](https://github.com/AgrDataSci/maniva): index of the linked repositories

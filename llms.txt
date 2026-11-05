@@ -1,6 +1,6 @@
 # FAIR and AI-ready template for data analysis projects
 
-> A project scaffold for R analyses that people and AI assistants can rerun, trace and cite. Each script comes with a decision record, a test and a provenance entry linking its outputs to the data, protocol and evidence behind them. Part of the AgrDataSci ai-ready-documentation suite.
+> A project scaffold for R analyses that people and AI assistants can rerun, trace and cite. Each script comes with a decision record, a test and a provenance entry linking its outputs to the data, protocol and evidence behind them. Part of AIpim, the AgrDataSci AI-ready documentation suite.
 
 Read SKILL.md before helping a user. It holds the rules, the conventions and the file index.
 

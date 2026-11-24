@@ -99,7 +99,7 @@ template-repo-data-analysis/
 
 # AI-ready documentation
 
-The template belongs to ai-ready-documentation (<https://github.com/AgrDataSci/ai-ready-documentation>), a family of linked repositories that make the tricot approach to on-farm testing usable by people and AI assistants. Each repository in the family covers one layer, namely the published evidence, the field protocols, the trial data and the analytical approaches, and each shares the same skeleton of `SKILL.md`, `README.md`, `CITATION.cff` and `LICENSE`. The template is not itself a layer of evidence. It is the scaffold from which any layer, or any research project, can start.
+The template belongs to maniva (<https://github.com/AgrDataSci/maniva>), an open commons of evidence, protocols, data and analysis for agricultural research, built as a family of linked repositories that make the tricot approach to on-farm testing usable by people and AI assistants. Each repository in the family covers one layer, namely the published evidence, the field protocols, the trial data and the analytical approaches, and each shares the same skeleton of `SKILL.md`, `README.md`, `CITATION.cff` and `LICENSE`. The template is not itself a layer of evidence. It is the scaffold from which any layer, or any research project, can start.
 
 Two principles guide the design. First, reproducing a computation is different from validating an interpretation. A passing test shows that the code reruns and gives the expected numbers, while the decision record states whether the method suits the question and what the results cannot support. Second, missing information is stated rather than filled in. The provenance file uses `null` for unknown values, and the instructions forbid an assistant from guessing a DOI, ORCID, license, funder or date.
 
@@ -122,7 +122,7 @@ Researchers adopt the template in these steps.
 
 # What is new in version 1.3
 
-Version 1.3 adds decision records, the provenance file, tests with continuous checks on GitHub, pinned package versions, and instructions for AI assistants. The README now explains key terms and each tool in plain language for students and researchers new to data management. The example script now checks the rankings before fitting the model and saves its outputs. The documentation was revised throughout, and the template now links to the other repositories of ai-ready-documentation.
+Version 1.3 adds decision records, the provenance file, tests with continuous checks on GitHub, pinned package versions, and instructions for AI assistants. The README now explains key terms and each tool in plain language for students and researchers new to data management. The example script now checks the rankings before fitting the model and saves its outputs. The documentation was revised throughout, and the template now links to the other repositories of maniva.
 
 # Conclusion
 
